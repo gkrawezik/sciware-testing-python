@@ -51,7 +51,7 @@ def add_vectors(vector_1, vector_2):
     add_vec = []
 
     for a, b in zip(vector_1, vector_2):
-        add_vec.append(a * b)
+        add_vec.append(a + b)
 
     return add_vec
 
@@ -64,4 +64,10 @@ def count_ones(input_list):
     return count
 
 # Make a new function which counts the number of twos in a list
-#def count_twos(input_list):
+def count_twos(input_list):
+    count = 0
+    for n in input_list:
+        if n == 2:
+            count += 1
+
+    return count

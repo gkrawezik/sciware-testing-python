@@ -8,16 +8,21 @@ def test_sum_numbers_123():
 
 def test_sum_numbers_yours():
     # write another test of the sum_numbers function
-    pass
+    sum = sum_numbers([0,0,0])
+    assert sum == 0
 
 def test_sum_numbers_empty():
     # what's the sum of an empty list?
-    pass
+    sum = sum_numbers([])
+    assert sum == 0
 
-#@pytest.mark.xfail(strict=True, raises=TypeError)
+def test_add_vectors():
+    sum = add_vectors([1,2,3],[4,5,6])
+    assert sum == [5,7,9]
+
+@pytest.mark.xfail(strict=True, raises=TypeError)
 def test_sum_strings():
-    #assert sciware_testing_python.sum_numbers(["1","2","3"]) == "123"
-    pass
+    assert sum_numbers(["1","2","3"]) == "123"
 
 # Write a test for the add_vectors function
 
